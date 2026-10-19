@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login | ITM</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <script src="script.js"
+            defer></script>
+
+</head>
+
+<body>
+
+    <header class="simple-header">
+
+        <a href="index.html"
+           class="back-home">
+
+            ← Home
+
+        </a>
+
+    </header>
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <img src="college-logo.png"
+                 alt="ITM College Logo"
+                 class="login-logo">
+
+            <h1>Student Login</h1>
+
+            <p class="login-subtitle">
+
+                Enter your details to view your
+                examination result.
+
+            </p>
+
+            <form id="studentLoginForm">
+
+                <label for="studentRoll">
+                    Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="studentRoll"
+                    placeholder="e.g. 24012001000XX"
+                    required
+                >
+
+                <label for="studentDob">
+                    Date of Birth
+                </label>
+
+                <!-- dob name intentionally kept -->
+
+                <input
+                    type="date"
+                    id="studentDob"
+                    name="dob"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="login-button">
+
+                    View Result
+
+                </button>
+
+                <p id="studentLoginMessage"
+                   class="error-message">
+                </p>
+
+            </form>
+
+            <a href="index.html"
+               class="bottom-home">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Copyright © 2026 Institute of Technology and Management.
+        </p>
+
+    </footer>
+
+</body>
+</html>

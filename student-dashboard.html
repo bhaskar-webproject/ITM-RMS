@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result | ITM GKP</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <script src="script.js"
+            defer></script>
+
+</head>
+
+<body>
+
+    <!-- SCREEN HEADER -->
+
+    <header class="dashboard-header no-print">
+
+        <div class="dashboard-brand">
+
+            <img
+                src="college-logo.png"
+                alt="ITM Logo"
+                class="dashboard-logo"
+            >
+
+            <div>
+
+                <h2>Student Dashboard</h2>
+
+                <p>
+                    Examination Result Portal
+                </p>
+
+            </div>
+
+        </div>
+
+        <button
+            id="studentLogout"
+            class="logout-button">
+
+            Logout
+
+        </button>
+
+    </header>
+
+    <main class="result-container">
+
+        <!-- RESULT -->
+
+        <section
+            id="resultCard"
+            class="result-card"
+        >
+
+            <!-- COLLEGE HEADER -->
+
+            <div class="result-header">
+
+                <img
+                    src="college-logo.png"
+                    alt="ITM College Logo"
+                    class="result-logo"
+                >
+
+                <div class="result-college-info">
+
+                    <h1>
+                        INSTITUTE OF TECHNOLOGY
+                        AND MANAGEMENT
+                    </h1>
+
+                    <h1>
+                        GIDA, GORAKHPUR
+                    </h1>
+
+                    <p>
+                        <b>
+                        STUDENT RESULT MARKSHEET
+                        </b>    
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="result-line"></div>
+
+            <!-- STUDENT DETAILS -->
+
+            <h3 class="result-section-title">
+                STUDENT DETAILS
+            </h3>
+
+            <div
+                id="resultDetails"
+                class="result-details"
+            >
+            </div>
+
+            <!-- SUBJECT -->
+
+            <h3 class="result-section-title">
+                SUBJECT WISE PERFORMANCE
+            </h3>
+
+            <div class="result-table-container">
+
+                <table class="result-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>SUBJECT</th>
+
+                            <th>MAX MARKS</th>
+
+                            <th>MARKS OBTAINED</th>
+
+                            <th>GRADE</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="resultMarks">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- SUMMARY -->
+
+            <div
+                id="resultSummary"
+                class="result-summary"
+            >
+            </div>
+
+            <!-- DECLARATION -->
+
+            <div class="declaration">
+
+                <p>
+                    Date of Declaration:
+                    <strong id="declarationDate"></strong>
+                </p>
+
+            </div>
+
+            <!-- SIGNATURE -->
+
+            <div class="controller-section">
+
+                <p>
+                    Controller of Examinations
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- BUTTONS -->
+
+        <div class="result-buttons no-print">
+
+            <button
+                id="printResult"
+                class="blue-button">
+
+                🖨 Print Result
+
+            </button>
+
+            <a
+                href="index.html"
+                class="gray-button">
+
+                Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+

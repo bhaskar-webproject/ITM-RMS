@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | ITM</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <script src="script.js"
+            defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="simple-header">
+
+        <a href="index.html"
+           class="back-home">
+
+            ← Home
+
+        </a>
+
+    </header>
+
+    <!-- LOGIN -->
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <img src="college-logo.png"
+                 alt="ITM College Logo"
+                 class="login-logo">
+
+            <h1>Admin Login</h1>
+
+            <p class="login-subtitle">
+                Sign in to manage student records.
+            </p>
+
+            <form id="adminLoginForm">
+
+                <label for="username">
+                    Admin Username
+                </label>
+
+                <input
+                    type="password"
+                    id="username"
+                    placeholder="Enter username"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="login-button">
+
+                    Login
+
+                </button>
+
+                <p id="adminLoginMessage"
+                   class="error-message">
+                </p>
+
+            </form>
+
+            <a href="index.html"
+               class="bottom-home">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+          Copyright © 2026 Institute of Technology and Management.
+        </p>
+
+    </footer>
+
+</body>
+</html>

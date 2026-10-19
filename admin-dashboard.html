@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | ITM</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <script src="script.js"
+            defer></script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div class="dashboard-brand">
+
+            <img src="college-logo.png"
+                 alt="ITM Logo"
+                 class="dashboard-logo">
+
+            <div>
+
+                <h2>Admin Dashboard</h2>
+
+                <p>
+                    Student Result Management
+                </p>
+
+            </div>
+
+        </div>
+
+        <button
+            id="adminLogout"
+            class="logout-button">
+
+            Logout
+
+        </button>
+
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- SEARCH -->
+
+        <section class="dashboard-card">
+
+            <h1>Student Records</h1>
+
+            <p>
+                Search students by roll number.
+            </p>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchRoll"
+                    placeholder="Enter roll number"
+                >
+
+                <button
+                    type="button"
+                    id="searchBtn"
+                    class="blue-button">
+
+                    Search
+
+                </button>
+
+                <button
+                    type="button"
+                    id="resetSearch"
+                    class="gray-button">
+
+                    Show All
+
+                </button>
+
+            </div>
+
+            <p id="adminMessage"
+               class="admin-message">
+            </p>
+
+        </section>
+
+        <!-- ADD / EDIT -->
+
+        <section class="dashboard-card">
+
+            <h2 id="formTitle">
+                Add New Student
+            </h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="hidden"
+                    id="editId"
+                >
+
+                <div class="form-grid">
+
+
+                    <!-- ROLL -->
+
+                    <div class="form-group">
+
+                        <label for="rollNo">
+                            Roll Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="rollNo"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- DOB -->
+
+                    <div class="form-group">
+
+                        <label for="dob">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- COURSE -->
+
+                    <div class="form-group">
+
+                        <label for="course">
+                            Course
+                        </label>
+
+                        <input
+                            type="text"
+                            id="course"
+                            value="B.Tech"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- BRANCH -->
+
+                    <div class="form-group">
+
+                        <label for="branch">
+                            Branch
+                        </label>
+
+                        <input
+                            type="text"
+                            id="branch"
+                            value="CSE"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- SEMESTER -->
+
+                    <div class="form-group">
+
+                        <label for="semester">
+                            Semester
+                        </label>
+
+                        <input
+                            type="number"
+                            id="semester"
+                            min="1"
+                            max="8"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- WEB -->
+
+                    <div class="form-group">
+
+                        <label for="webMarks">
+                            Web Technology
+                        </label>
+
+                        <input
+                            type="number"
+                            id="webMarks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- DAA -->
+
+                    <div class="form-group">
+
+                        <label for="daaMarks">
+                            DAA
+                        </label>
+
+                        <input
+                            type="number"
+                            id="daaMarks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- DBMS -->
+
+                    <div class="form-group">
+
+                        <label for="dbmsMarks">
+                            DBMS
+                        </label>
+
+                        <input
+                            type="number"
+                            id="dbmsMarks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- OOSD -->
+
+                    <div class="form-group">
+
+                        <label for="oosdMarks">
+                            OOSD with C++
+                        </label>
+
+                        <input
+                            type="number"
+                            id="oosdMarks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- NETWORK -->
+
+                    <div class="form-group">
+
+                        <label for="networkMarks">
+                            Computer Network
+                        </label>
+
+                        <input
+                            type="number"
+                            id="networkMarks"
+                            min="0"
+                            max="100"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        id="saveStudent"
+                        class="blue-button">
+
+                        Save Student
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clearForm"
+                        class="gray-button">
+
+                        Clear Form
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- STUDENT TABLE -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                All Student Records
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Roll No.</th>
+
+                            <th>Name</th>
+
+                            <th>Course</th>
+
+                            <th>Branch</th>
+
+                            <th>Semester</th>
+
+                            <th>Percentage</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+     <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+          Copyright © 2026 Institute of Technology and Management.
+        </p>
+
+    </footer>
+
+</body>
+</html>
